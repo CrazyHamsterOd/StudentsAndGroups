@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="Student_es2015.js"></script>
+    <script src="Group_es2015.js"></script>
+    <script>
+        const firstStudent = new Student("Ivan", "Ivanov", 2000);
+        firstStudent.ratings = [90, 100, 80];
+        firstStudent.absent();
+        firstStudent.present();
+        firstStudent.present();
+        firstStudent.present();
+        firstStudent.present();
+
+        const secondStudent = new Student("Petr", "Petrov", 2001);
+        secondStudent.ratings = [90, 100, 90];
+        secondStudent.present();
+        secondStudent.absent();
+        secondStudent.absent();
+        secondStudent.present();
+        secondStudent.present();
+
+        const anotherStudent = new Student("Sidor", "Sidorov", 1999);
+        anotherStudent.ratings = [100, 100, 100];
+        anotherStudent.present();
+        anotherStudent.present();
+        anotherStudent.present();
+        anotherStudent.present();
+        anotherStudent.present();
+
+        const newGroup = new Group;
+        newGroup.push(firstStudent);
+        newGroup.push(secondStudent);
+        newGroup.push(anotherStudent);
+
+        console.log("Group visit rating: " + newGroup.attendance());
+        console.log("Group performance: " + newGroup.performance());
+
+        console.log("Ivanov");
+        console.log("Visit rating: " + newGroup.attendance("Ivanov"));
+        console.log("Performance: " + newGroup.performance("Ivanov"));
+        console.log("Petrov");
+        console.log("Visit rating: " + newGroup.attendance("Petrov"));
+        console.log("Performance: " + newGroup.performance("Petrov"));
+        console.log("Sidorov");
+        console.log("Visit rating: " + newGroup.attendance("Sidorov"));
+        console.log("Performance: " + newGroup.performance("Sidorov"));
+    </script>
+</body>
+
+</html>
